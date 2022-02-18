@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.7);
+    background: #f6f6f6 url(../img/fondo2.png) no-repeat right bottom;
+    background-attachment: fixed;
+}
+
+#body {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: normal;
+    margin: 0px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+pre {
+    background:#F8F8FF;
+    border: #000 dashed 1px;
+    padding: 6px;
+    overflow: auto;
+}
+
+em {
+    color: #b24926;
+}
+
+button.general {
+    background-color: #3880e2;
+    color: #fff;
+    border: 2px solid #3880e2;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+button.general.active, button.general:hover {
+    background-color: #b1cbef;
+    color: #3880e2;
+}
+
+#content {
+    
+}
+
+#play_scorm {
+    text-align: center;
+}
+
+.ui-state-error, .ui-state-highlight {
+    padding: 10px;
+}
+
+header .logo {
+    background-color: #21263f;
+    width: 100%;
+    height: 70px;
+}
+
+header .logo img {
+    padding: 10px 20px;
+}
+
+header .title {
+    height: 150px;
+    padding: 50px 50px 50px 150px;
+    background: url(../img/banner.png) no-repeat right;
+    background-size: 1200px;
+    position: relative;
+}
+
+header .title:before {
+    content: "";
+    width: 3px;
+    height: 100px;
+    background-color: rgb(56, 128, 224);
+    position: absolute;
+    left: 150px;
+    top: 63px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 30px 70px;
+}
+
+.section p {
+    padding: 10px 50px;
+    text-align: justify;
+}
+
+.section h2 {
+    padding: 10px 30px;
+    min-width: 140px;
+    font-size: 24px;
+}
+
+.section.presentation {
+    background: #fff url(../img/fondo1.png) no-repeat left top;
+}
+
+.section p {position: relative;}
+
+.section.modality p:before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3880e2;
+}
+
+.section.duration p:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -45px;
+    background-image: url(../img/spritesheet.png);
+    width: 86px;
+    height: 85px;
+    background-position: -73px -230px;
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+}
+
+@media (max-width:750px) {
+    #body {
+        width: 95%;
+    }
+
+    #play_scorm {
+        max-width: 100%;
+    }
+
+    header .title {
+        height: 100px;
+        padding: 12px 10px;
+        background-size: 100% 100%;
+    }
+
+    header .title:before {
+        content: "";
+        width: 3px;
+        height: 80px;
+        background-color: rgb(56, 128, 224);
+        position: absolute;
+        left: 15px;
+        top: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .section h2 {
+        padding: 0;
+    }
+
+    .section p {
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    .section.duration p:before {
+        left: -60px;
+    }
+
+    button.general {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,766 @@
+.box-text.connection {margin-top: 20px;}
+
+.text_tooltip {line-height: 18px;}
+
+.ui-dialog .ui-dialog-content {max-height: 90vh !important;}
+
+img {max-width: 100%;}
+
+.row {align-items: center;}
+
+.expand-image {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+}
+
+.short {
+    max-width: 700px;
+    margin: auto;
+}
+
+.logos img {
+    max-width: 300px;
+}
+
+.expand_image_content img {
+    max-height: 100%;
+}
+
+.w-300 {width: 300px;}
+
+.center {margin: auto; text-align: center;}
+
+.genially {
+    max-width: 700px;
+    margin: auto;
+}
+/********************************************************************************/
+/* Gráfico 1
+/********************************************************************************/
+.mouse-over-one.grafico1 {
+    background: url(../content/modulo_1_grafica1.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    width: 100%;
+    padding-top: 23%;
+}
+
+.grafico1 .button {
+    top: 17%;
+    position: absolute;
+    cursor: pointer;
+    width: 12%;
+    height: 61%;
+    border-radius: 10px;
+}
+
+.grafico1 .button:hover {
+    background-color: #B9E6F580;
+}
+
+.grafico1 .button.paso1 {
+    left: 10.4%;
+}
+.grafico1 .button.paso2 {left: 29.4%;}
+.grafico1 .button.paso3 {
+    left: 42%;
+    width: 16.5%;
+    height: 30%;
+    top: 0;
+}
+.grafico1 .button.paso4 {
+    left: 59.9%;
+}
+.grafico1 .button.paso5 {left: 78.9%;}
+
+#contenido_grafico1 .grafico1 .button:hover {
+    background: #f6ae00;
+}
+
+#contenido_grafico1 .grafico1 {
+    vertical-align: top;
+}
+
+#contenido_grafico1 h5 {
+    margin: 0;
+}
+
+#contenido_grafico1 {
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 7px 7px 5px #cccccc;
+    background: #FFFFFF;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+/********************************************************************************/
+/* Gráfico 2
+/********************************************************************************/
+.mouse-over-one.grafico2 .button {
+    background-size: 100% !important;
+    position: relative;
+    width: 100%;
+    padding-top: 30%;
+    filter: grayscale(1);
+}
+
+.mouse-over-one.grafico2 .uni {
+    background: url(../content/modulo_1_grafica2.png) no-repeat;
+}
+
+.mouse-over-one.grafico2 .bi {
+    background: url(../content/modulo_1_grafica2_2.png) no-repeat;
+}
+
+.grafico2 .button:hover {
+    filter: grayscale(0);
+}
+
+#contenido_grafico2 .grafico2 {
+    vertical-align: top;
+}
+
+#contenido_grafico2 {
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 7px 7px 5px #cccccc;
+    background: #FFFFFF;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+
+#pag-red .row {
+    align-items: center;
+}
+/********************************************************************************/
+/* Gráfico 3
+/********************************************************************************/
+#grafico3 {
+    max-width: 800px;
+    margin: auto;
+}
+
+.mouse-over-one.grafico3 {
+    background: url(../content/modulo_1-2_grafica3.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    width: 100%;
+    padding-top: 84%;
+}
+
+.grafico3 .button {
+    position: absolute;
+    cursor: pointer;
+    width: 13.4%;
+    height: 16%;
+    border-radius: 50%;
+}
+
+.grafico3 .button:hover {
+    background-color: #B9E6F580;
+}
+
+.grafico3 .button.rld {
+    top: 13.8%;
+    left: 34.5%;
+    width: 32.6%;
+    height: 12.5%;
+    border-radius: 10px;
+}
+
+.grafico3 .button.rmr {
+    top: 29.6%;
+    left: 40.6%;
+    width: 21%;
+    height: 17%;
+    border-radius: 10px;
+}
+
+.grafico3 .button.rm1 {
+    top: 40.3%;
+    left: 21.3%;
+    width: 17.8%;
+    height: 14%;
+    border-radius: 10px;
+}
+
+.grafico3 .button.rm2 {
+    top: 40.3%;
+    left: 63.5%;
+    width: 17.8%;
+    height: 14%;
+    border-radius: 10px;
+}
+
+.grafico3 .button.ra1 {
+    top: 24%;
+    left: 7%;
+}
+
+.grafico3 .button.ra2 {
+    top: 45.2%;
+    left: 5.5%;
+}
+
+.grafico3 .button.ra3 {
+    top: 59.4%;
+    left: 22.2%;
+}
+
+.grafico3 .button.ra4 {
+    top: 53.4%;
+    left: 41.6%;
+}
+
+.grafico3 .button.ra5 {
+    top: 58.7%;
+    left: 64.7%;
+}
+
+.grafico3 .button.ra6 {
+    top: 39%;
+    left: 83%;
+}
+.grafico3 .button.paso5 {left: 83%;}
+
+#contenido_grafico3 .grafico3 .button:hover {
+    background: #f6ae00;
+}
+
+#contenido_grafico3 .grafico3 {
+    vertical-align: top;
+}
+
+#contenido_grafico3 h5 {
+    margin: 0;
+}
+
+#contenido_grafico3 {
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 7px 7px 5px #cccccc;
+    background: #FFFFFF;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+/********************************************************************************/
+/* Figura 1
+/********************************************************************************/
+.mouse-over-one.figura1 {
+    background: url(../content/modulo_1_figura1-1.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    width: 75%;
+    padding-top: 45%;
+    margin: auto;
+}
+
+.figura1 .button {
+    left: 67%;
+    position: absolute;
+    cursor: pointer;
+    width: 25%;
+    height: 20%;
+}
+
+.figura1 .button:hover {
+    background-color: #B9E6F580;
+}
+
+.figura1 .button.fttn {top: 5%}
+.figura1 .button.fttc {
+    top: 27%;
+    left: 73%;
+}
+.figura1 .button.fttb {
+    top: 47%;
+    left: 73%;
+}
+.figura1 .button.ftth {top: 67%;}
+
+#contenido_figura1 .figura1 .button:hover {
+    background: #f6ae00;
+}
+
+#contenido_figura1 .figura1 {
+    vertical-align: top;
+}
+
+#contenido_figura1 h5 {
+    margin: 0;
+}
+
+#contenido_figura1 .element {
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 7px 7px 5px #cccccc;
+    background: #FFFFFF;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+    height: 150px;
+    overflow: auto;
+}
+
+#pag-definiciones .row {
+    align-items: center;
+}
+
+#pag-definiciones .row img {
+    width: 100%;
+}
+
+.datatable th {
+    font-size: 18px;
+}
+/********************************************************************************/
+/* Figura 2
+/********************************************************************************/
+#pag-ftth .w-content-controler {
+    background-color: transparent;
+    border: none;
+}
+
+#pag-ftth .col-2 {
+    text-align: center;
+}
+/********************************************************************************/
+/* Gráfica 4
+/********************************************************************************/
+#grafica4 {
+    max-width: 800px;
+    margin: auto;
+}
+
+.composicion {
+    background: url(../content/modulo_1_grafica4.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 70%;
+    position: relative;
+}
+
+.composicion .tooltip {
+    position: absolute;
+}
+
+.composicion .tooltip .light {
+    position: absolute;
+}
+
+.composicion .tooltip.olt {
+    left: 2%;
+    top: 32%;
+    width: 15%;
+    height: 50%;
+}
+
+.composicion .tooltip .olt1.light {
+    width: 100%;
+    height: 100%;
+}
+
+.composicion .tooltip.olt:hover > .light {
+    background-color: #3880da24;
+}
+
+.composicion .tooltip.odn {
+    top: 23%;
+    left: 17%;
+    width: 79%;
+    height: 46%;
+}
+
+.composicion .tooltip .odn1.light {
+    width: 59%;
+    height: 100%;
+    right: 0;
+}
+
+.composicion .tooltip .odn2.light {
+    width: 41%;
+    left: 0;
+    height: 120%;
+    top: -14%;
+}
+
+.composicion .tooltip .odn3.light {
+    top: -12%;
+    height: 12%;
+    width: 7.5%;
+    left: 60%;
+}
+
+.composicion .tooltip.odn:hover > .light {
+    background-color: #c300211f;
+}
+
+.composicion .tooltip.ont {
+    top: 0;
+    left: 35%;
+    width: 47%;
+}
+
+.composicion .tooltip .ont1.light {
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 17%;
+}
+
+.composicion .tooltip .ont2.light {
+    bottom: 0;
+    right: 0;
+    width: 86%;
+    height: 31%;
+}
+
+.composicion .tooltip .ont3.light {
+    top: 7%;
+    right: 37%;
+    width: 23%;
+    height: 17%;
+}
+
+.composicion .tooltip.ont:hover > .light {
+    background-color: #00a2001f;
+}
+/********************************************************************************/
+/* Figura 4
+/********************************************************************************/
+#figura4 {
+    max-width: 900px;
+    margin: auto;
+}
+
+#figura4 .esquema {
+    background: url(../content/modulo_1_figura4.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 56%;
+    position: relative;
+}
+
+#figura4 .esquema .w-content-controler,
+#figura4 .esquema .tooltip {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+}
+
+#figura4 .esquema .w-content-controler:hover,
+#figura4 .esquema .tooltip:hover{
+    background-color: #4d8dde1f;
+}
+
+#figura4 .esquema .w-content-controler.oficina-central {
+    width: 24%;
+    height: 15.5%;
+    top: 16.4%;
+    left: 2.4%;
+    border-radius: 6px;
+}
+
+#figura4 .esquema .w-content-controler.olt {
+    width: 24%;
+    height: 15.5%;
+    top: 38.2%;
+    left: 2.4%;
+    border-radius: 6px;
+}
+
+#figura4 .esquema .w-content-controler.conexion {
+    top: 61%;
+    width: 24%;
+    height: 15.5%;
+    left: 2.4%;
+    border-radius: 6px;
+}
+
+#figura4 .esquema .w-content-controler.odn {
+    width: 24%;
+    height: 15%;
+    top: 84.4%;
+    left: 26.3%;
+    border-radius: 6px;
+}
+
+#figura4 .esquema .w-content-controler.ont {
+    width: 18.5%;
+    height: 15%;
+    top: 0;
+    right: 0;
+}
+
+#figura4 .esquema .tooltip.drop {
+    width: 7%;
+    height: 10%;
+    left: 75%;
+    top: 33.3%;
+}
+
+#figura4 .esquema .tooltip.feeder {
+    width: 10%;
+    height: 10%;
+    left: 47%;
+    top: 68%;
+}
+
+#figura4 .esquema .tooltip.distribucion {
+    width: 10%;
+    height: 10%;
+    left: 64%;
+    top: 40%;
+}
+
+.globo {
+    padding: 10px;
+    text-align: justify;
+    border: 1px solid #aaa;
+    box-shadow: 7px 7px 5px #cccccc;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+}
+
+.globo:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 120px;
+    top: -96px;
+    left: -10px;
+    z-index: -1;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #aaa;
+    background-color: #fff;
+}
+
+.globo:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: rotate(135deg);
+    top: -111px;
+    left: 6px;
+    z-index: -1;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-color: #aaa;
+}
+
+/*#oficina-central img {
+    width: 100%;
+}*/
+
+#oficina-central .row img {
+    width: 300px;
+}
+
+#olt .view-first .view-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#conexion .racks {
+    max-width: 700px;
+    margin: auto;
+}
+
+#conexion .paneles {
+    background: url(../content/modulo_1_imagen2.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 60%;
+    position: relative;
+    margin-top: 20px;
+}
+
+#conexion .apuntador {
+    position: absolute;
+    font-weight: bold;
+}
+
+#conexion .apuntador:hover {
+    background-color: #afcdf2;
+    padding: 10px;
+}
+
+#conexion .paneles .note_1 {
+    top: 7%;
+    left: 75%;
+}
+
+#conexion .paneles .note_2 {
+    top: -3%;
+    left: 31%;
+}
+
+#conexion .paneles .note_3 {
+    bottom: 15%;
+    left: 0;
+}
+
+#conexion .paneles .note_4 {
+    top: 81%;
+    left: 34%;
+}
+/********************************************************************************/
+/* Figura 6
+/********************************************************************************/
+#figura6 {
+    max-width: 800px;
+    margin: auto;
+}
+
+.figura6 {
+    background: url(../content/modulo_1-2_figura5-1.png) no-repeat;
+    background-size: 100%;
+    padding-top: 48%;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.figura6 .button {
+    background-size: 100% !important;
+    position: absolute;
+    width: 23%;
+    top: 0;
+    bottom: 0;
+}
+
+.figura6 .button.paso1 {
+    position: absolute;
+    width: 47.5%;
+    height: 27%;
+    left: 16%;
+    top: 54%;
+}
+
+.figura6 .button.paso1:hover {
+    background: url(../content/modulo_1-2_base-activa.png) no-repeat;
+}
+
+.figura6 .button.paso2 {
+    position: absolute;
+    width: 13%;
+    height: 0;
+    padding-top: 13%;
+    left: 31.3%;
+    top: 60%;
+}
+
+.figura6 .button.paso2:hover {
+    background: url(../content/modulo_1-2_2activo.png) no-repeat;
+}
+
+.figura6 .button.paso3 {
+    width: 15%;
+    height: 0;
+    padding-top: 11%;
+    position: absolute;
+    top: 35.3%;
+    left: 53.4%;
+}
+
+.figura6 .button.paso3:hover {
+    background: url(../content/modulo_1-2_3activo.png) no-repeat;
+}
+
+.figura6 .button.paso4 {
+    position: absolute;
+    width: 33.3%;
+    padding-top: 20%;
+    top: 50.6%;
+    left: 65.4%;
+}
+
+.figura6 .button.paso4:hover {
+    background: url(../content/modulo_1-2_4activo.png) no-repeat;
+}
+
+#contenido_figura6 {
+    padding: 10px;
+    height: auto;
+    text-align: justify;
+    box-shadow: 7px 7px 5px #cccccc;
+    background: #FFFFFF;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+#contenido_figura6 h5 {
+    margin-top: 10px;
+}
+
+#contenido_figura6 img {
+    max-height: 250px;
+}
+/********************************************************************************/
+/* Imagen 5
+/********************************************************************************/
+.router-image {
+    background: url(../content/modulo_1-2_imagen5.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 53%;
+    position: relative;
+}
+
+.router-image .note_pointer_left,
+.router-image .note_pointer_right {
+    transform: rotate(90deg);
+}
+
+.router-image .note_pointer_left .tooltip,
+.router-image .note_pointer_right .tooltip {
+    transform: rotate(-90deg);
+    font-size: 12px;
+}
+
+.router-image .note_pointer_left.power {
+    bottom: -2%;
+    right: 15%;
+}
+
+.router-image .note_pointer_left.optical {
+    top: 85%;
+    left: 11%;
+}
+
+.router-image .note_pointer_right.lan {
+    bottom: 35%;
+    right: 57%;
+}
+
+.router-image .note_pointer_right.tel {
+    bottom: 35%;
+    left: 55.5%;
+}
+/********************************************************************************/
+/* Figura 5
+/********************************************************************************/
+.figura5 {
+    background: url(../content/modulo_1-2_figura5-1.png) no-repeat;
+    background-size: 100%;
+    width: 80%;
+    padding-top: 39%;
+    position: relative;
+    margin: auto;
+}
+
+.figura5 .central {
+    background: url(../content/modulo_1-2_1activo.png) no-repeat;
+    background-size: 100%;
+    width: 14%;
+    padding-top: 20%;
+    position: absolute;
+    left: 8%;
+    top: 21%;
+}

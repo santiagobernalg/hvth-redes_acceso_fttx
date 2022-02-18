@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Conceptos preliminares</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+    <script src="components/twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="components/twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="components/twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
+
+    <script src="components/mediaelementjs/mediaelement-and-player.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="components/mediaelementjs/mediaelementplayer.css" type="text/css" />
+
+    <script src="components/maphilight/jquery.maphilight.min.js" type="text/javascript"></script>
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <header>
+            <div class="logo">
+                <img src="img/logo.png" alt="Fyco learning" />
+            </div>
+            <nav label="Principal" class="horizontal main" data-offset="true">
+                <menu>
+                    <menuitem label="Contenido">
+                        <menu>
+                            <menuitem label="1. Red de comunicaciones" data-page="pag-red"></menuitem>
+                            <menuitem label="2. Definiciones de FTTx" data-page="pag-definiciones"></menuitem>
+                            <menuitem label="3. FTTH" data-page="pag-ftth"></menuitem>
+                        </menu>
+                    </menuitem>
+                    <menuitem label="Bibliografía" data-page="pag-bibliografia"></menuitem>
+                    <menuitem label="Créditos" data-page="pag-creditos"></menuitem>
+                </menu>
+            </nav>
+            <h2 class="page-title"></h2>
+        </header>
+
+        <main style="display: none;">
+
+            <section id="pag-red" ptitle="1. Red de comunicaciones">
+                <div class="subpage">
+                    <p>Comencemos el estudio de este documento identificando qué es una red de telecomunicaciones, cuál es su propósito y algunas limitaciones de las redes actuales.</p>
+                    <h3>1.1. Definición</h3>
+                    <p>Una red de comunicaciones es el conjunto de elementos encargados de la transmisión, recepción y procesamiento de información entre dos o más lugares, mediante circuitos electrónicos que generan ondas electromagnéticas o partículas de luz.</p>
+                    <div class="box-text connection">
+                        <p>Veamos, en la siguiente figura cuáles son los componentes del sistema:</p>
+                    </div>
+                    <div class="instruction">
+                        <span class="notmobile">Pasa el cursor del mouse sobre </span>
+                        <span class="onlymobile">Toca </span>
+                        cada elemento para conocer su descripción en la parte inferior.
+                    </div>
+                    <div class="genially">
+                        <div style="width: 100%;"><div style="position: relative; padding-bottom: 75.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="900" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/620e7930c6e2e900187b2d94" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+                    </div>
+                    <!-- <div class="grafico1 mouse-over-one">
+                        <div class="button paso1 current" data-ref="#contenido_grafico1 .p1"></div>
+                        <div class="button paso2" data-ref="#contenido_grafico1 .p2"></div>
+                        <div class="button paso3" data-ref="#contenido_grafico1 .p3"></div>
+                        <div class="button paso4" data-ref="#contenido_grafico1 .p4"></div>
+                        <div class="button paso5" data-ref="#contenido_grafico1 .p5"></div>
+                    </div> -->
+                    <div class="about"><strong>Gráfica 1.</strong> Red de comunicaciones.</div>
+
+                    <!-- <div id="contenido_grafico1">
+                        <div class="element p1"><h5>Fuente de información:</h5><p> se encarga de transformar el mensaje en señales eléctricas. Por ejemplo, un micrófono recibe la voz humana y la convierte en una señal eléctrica.</p></div>
+                        <div class="element p2" style="display: none"><h5>Transmisor:</h5><p> este elemento recibe las señales electromagnéticas y las adecúa al medio de transmisión. Hace transformaciones en la señal para hacer más eficiente y más robusto su paso por el medio de transmisión.</p></div>
+                        <div class="element p3" style="display: none"><h5>Medio de transmisión: </h5><p>es el elemento de la red que permite el viaje de las señales a través de él, hasta llegar a su destino. Este medio o canal perturba la señal de origen, causándole distorsiones e introduciendo ruidos. Pueden ser medios inalámbricos (wifi por ejemplo) o cableados (los pares de cobre). En el caso particular de este curso, nuestro enfoque principal va hacia las fibras ópticas.</p></div>
+                        <div class="element p4" style="display: none"><h5>Receptor: </h5><p>recibe las señales del medio de transmisión y las adecua para ser procesadas electrónicamente por los equipos del cliente.</p></div>
+                        <div class="element p5" style="display: none"><h5>Destino de información: </h5><p>la señal entregada por el receptor debe ser de nuevo transformada para ser percibida por nuestros sentidos. Ejemplos de estos transductores de señal son los parlantes que permiten percibir las señales de sonido, los televisores y computadores que permiten ver las imágenes y sonidos enviados desde el origen de la red.</p></div>
+                    </div> -->
+
+                    <p>Este sistema puede ser unidireccional o bidireccional, así:</p>
+
+                    <div class="instruction">
+                        <span class="notmobile">Pasa el cursor del mouse sobre </span>
+                        <span class="onlymobile">Toca </span>
+                        cada imagen para conocer su descripción.
+                    </div>
+                    <div class="row">
+                        <div class="grafico2 mouse-over-one col-2">
+                            <div class="button uni current" data-ref="#contenido_grafico2 .t1"></div>
+                            <div class="button bi" data-ref="#contenido_grafico2 .t2"></div>
+                        </div>
+                        <div id="contenido_grafico2" class="col-2">
+                            <div class="element t1">
+                                <h5>Unidireccional</h5>
+                                <p>Cuando es unidireccional solo se envía información del operador al cliente, por ejemplo, la radio difusión o la televisión por cable.</p>
+                                <img src="content/gif1.gif" />
+                            </div>
+
+                            <div class="element t2" style="display: none">
+                                <h5>Bidireccional</h5>
+                                <p>La red bidireccional permite la comunicación en dos sentidos, con lo cual se pueden habilitar servicios interactivos. Es el caso de la red de telefonía y la que permite los servicios de internet, entre otras.</p>
+                                <img src="content/gif2.gif" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about"><strong>Gráfica 2.</strong> Tipo de sistemas de telecomunicaciones de acuerdo con el sentido de transmisión: a) Unidireccional, b) Bidireccional.</div>
+
+                </div>
+                <div class="subpage">
+                    <h3>1.2. Propósito general de un sistema de comunicaciones: más capacidad de transmitir información a mayor distancia (ancho de banda - distancia)</h3>
+                    <p>Una de las características importantes de las redes de telecomunicaciones es la relación ancho de banda y distancia, que se expresa en Mb/s ó Gb/s y Km respectivamente. Esta relación indica la capacidad de transmitir información y la distancia a la que el sistema de comunicación puede lograrlo. De hecho, las redes ópticas reciben su nombre de acuerdo con esta relación, teniendo cada una de ellas sus propios retos, equipos y procesamiento. Revisa esto en la gráfica e identifica los tipos de redes.</p>
+                    <div class="instruction">
+                        <span class="notmobile">Pasa el cursor del mouse sobre </span>
+                        <span class="onlymobile">Toca </span>
+                        cada elemento para conocer su descripción.
+                    </div>
+                    <div id="grafico3">
+                        <div class="grafico3 mouse-over-one">
+                            <div class="button rld tooltip" title="<strong>Red de larga distancia</strong> (100/200/400 Gb/s, ~2000 km). También se le conoce como red troncal, Core o Backbone.  Posibilita interconectar grandes ciudades, países y continentes."></div>
+                            <div class="button rmr tooltip" data-ref="#contenido_grafico3 .r2" title="<strong>Red metropolitana </strong>(100/200 Gb/s, ~600 km). Permiten enlazar servicios entre ciudades dentro del ámbito metropolitano."></div>
+                            <div class="button rm1 tooltip" data-ref="#contenido_grafico3 .r2" title="<strong>Red metropolitana </strong>(100/200 Gb/s, ~600 km). Permiten enlazar servicios entre ciudades dentro del ámbito metropolitano."></div>
+                            <div class="button rm2 tooltip" data-ref="#contenido_grafico3 .r2" title="<strong>Red metropolitana </strong>(100/200 Gb/s, ~600 km). Permiten enlazar servicios entre ciudades dentro del ámbito metropolitano."></div>
+                            <div class="button ra1 tooltip" data-ref="#contenido_grafico3 .r3" title="<strong>Redes de acceso óptico</strong> (1-10 Gb/s, ~60 km) Es la que está entre la oficina central del operador y los clientes."></div>
+                            <div class="button ra2 tooltip" data-ref="#contenido_grafico3 .r3" title="<strong>Redes de acceso óptico</strong> (1-10 Gb/s, ~60 km) Es la que está entre la oficina central del operador y los clientes."></div>
+                            <div class="button ra3 tooltip" data-ref="#contenido_grafico3 .r3" title="<strong>Redes de acceso óptico</strong> (1-10 Gb/s, ~60 km) Es la que está entre la oficina central del operador y los clientes."></div>
+                            <div class="button ra4 tooltip" data-ref="#contenido_grafico3 .r3" title="<strong>Redes de acceso óptico</strong> (1-10 Gb/s, ~60 km) Es la que está entre la oficina central del operador y los clientes."></div>
+                            <div class="button ra5 tooltip" data-ref="#contenido_grafico3 .r3" title="<strong>Redes de acceso óptico</strong> (1-10 Gb/s, ~60 km) Es la que está entre la oficina central del operador y los clientes."></div>
+                            <div class="button ra6 tooltip" data-ref="#contenido_grafico3 .r3" title="<strong>Redes de acceso óptico</strong> (1-10 Gb/s, ~60 km) Es la que está entre la oficina central del operador y los clientes."></div>
+                        </div>
+                        <div class="about"><strong>Gráfica 3.</strong> Tipos de redes de comunicaciones de acuerdo con su alcance y capacidad de transmitir información.</div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>1.3. Limitaciones de las redes actuales usadas en la última milla</h3>
+                    <p>La red de acceso, también conocida como <em>última milla</em>, hace referencia al último trayecto de la red de telecomunicaciones necesario para entregar los servicios a los clientes, las redes de cobre y redes hibridas como HFC son el objetivo a sustituir ya que sus bajas capacidades de transmisión de datos y altos costos de mantenimiento suponen una barrera en el desarrollo de nuevos servicios de telecom.</p>
+                    <div class="box-text connection">
+                        <p>En ese sentido, siendo la red de cara a los clientes, las limitaciones más relevantes son:</p>
+                    </div>
+                    <ul class="data_list">
+                        <li>Baja capacidad en el transporte de información, se convierte en un cuello de botella ante el constante incremento de demanda por ancho de banda, requerido para la oferta de nuevos servicios y aplicaciones, que requieren cada vez más velocidad y menos latencia.</li>
+                        <li>Algunas de estas redes tienen altas pérdidas por atenuación y están expuestas a inducciones electromagnéticas.</li>
+                        <li>Algunas de estas redes son de medio compartido (varios clientes conectados a la misma red), por lo cual son percibidas con desconfianza por parte de los clientes.</li>
+                    </ul>
+                    <div class="box-text important" label="En general">
+                        <p>es un segmento de alto costo, debido a que requieren mantenimiento más periódico de los equipos y elementos puestos en la casa del cliente.</p>
+                    </div>
+                    <div class="box-text connection">
+                        Una vez estudiadas las principales definiciones de la red de comunicaciones y algunas características relevantes a tener en cuenta, podemos empezar a hablar de las redes tipo FTTx, y veremos por qué se reconoce como una de las mejores alternativas para las redes de acceso.
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-definiciones" ptitle="2. Definiciones de FTTx">
+                <div class="subpage">
+                    <p>FTTx (Fiber To The x…) es una expresión genérica utilizada en telecomunicaciones para designar arquitecturas de red basadas en fibra óptica, donde la “x” es una variable que se reemplaza por una letra que está en relación con el punto hasta donde llega el extremo de la red de fibra óptica.</p>
+                    <div class="instruction">
+                        <span class="notmobile">Pasa el cursor del mouse sobre </span>
+                        <span class="onlymobile">Toca </span>
+                        cada elemento para conocer su descripción.
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            
+                            <div class="figura1 mouse-over-one">
+                                <div class="button fttn current" data-ref="#contenido_figura1 .x1"></div>
+                                <div class="button fttc" data-ref="#contenido_figura1 .x2"></div>
+                                <div class="button fttb" data-ref="#contenido_figura1 .x3"></div>
+                                <div class="button ftth" data-ref="#contenido_figura1 .x4"></div>
+                            </div>
+                            <div id="contenido_figura1">
+                                <div class="element x1"><h5>FTTN:</h5><p>Fibra al nodo (Fiber To The Node). Esta red se caracteriza por llegar hasta un armario de distribución y la terminación de la red es con cable de cobre soportado con tecnología xDSL hasta la residencia. La longitud de esta red es de 1,5 a 3 km del cliente.</p></div>
+                                <div class="element x2" style="display: none"><h5>FTTC:</h5><p>Fibra al andén (Fiber To The Curb). Se emplea un switch Ethernet al andén, una o dos fibras desde la oficina central (CO), requiere un concentrador remoto y energía eléctrica en el nodo remoto, la terminación es con red de cobre o coaxial hasta la residencia. En este caso el armario de distribución se encuentra a una distancia entre 300 y 600 metros.</p></div>
+                                <div class="element x3" style="display: none"><h5>FTTB:</h5><p>Fibra al edificio (Fiber To The Building). Enlace de fibra en el que el proveedor del servicio llega hasta el cuarto de distribución del edificio y luego la terminación es con cobre o coaxial hasta la residencia.</p></div>
+                                <div class="element x4" style="display: none"><h5>FTTH:</h5><p>Fibra al hogar (Fiber To The Home). En estas redes la fibra óptica llega hasta los predios de los clientes.</p></div>
+                            </div>
+                        </div>
+                        <div class="box_media col-2">
+                            <img src="content/modulo_1_figura1-2.png" />
+                        </div>
+                    </div>
+                    <div class="about"><strong>Figura 1.</strong> Redes FTTX.</div>
+                    <div class="box-text note" label="Nota:">
+                        <p>Siguiendo la misma nomenclatura, se tienen las siguientes redes:</p>
+                        <ul class="data_list">
+                            <li>FTTO (fibra a la oficina)</li>
+                            <li>FTTM (fibra a la máquina)</li>
+                            <li>FTTP (fibra a las premisas)</li>
+                        </ul>
+                    </div>
+                    <div class="box-text connection">
+                        <p>De estas configuraciones FTTx, el enfoque principal de este curso es hacia redes FTTH, es decir, aquellas que llegan a las casas de los clientes. Por ello, a continuación se detallará esta red desde sus estándares y elementos constitutivos, y podremos ver por qué tienen el auge actual y solucionan muchos de los limitantes de la red de acceso.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-ftth" ptitle="3. FTTH">
+                <div class="subpage">
+                    <h3>3.1. Introducción</h3>
+                    <p>Actualmente se evidencia una creciente demanda en el ancho de banda de los accesos a Internet de los clientes residenciales. Si bien los servicios móviles celulares han crecido en forma exponencial, igualmente están presentes los accesos a Internet que se basan en tecnologías cableadas en cobre como son las soluciones xDSL y las redes híbrido fibra coaxial-HFC- DOCSIS.</p>
+                    <p>Estas tecnologías presentan límites técnicos por interferencias, distancia y ancho de banda. En contraposición, las redes de fibra al hogar (FTTH) son de altas velocidades de transmisión, inmunes a interferencias electromagnéticas, no presentan oxidación y, siendo en general muy estables, presentan bajos costos para el operador. Por ello, en casi todos los mercados actuales se está instalando en forma masiva soluciones FTTH.</p>
+                    <p>FTTH viene en dos formas:</p>
+                    <div class="instruction">
+                        <span class="notmobile">Haz clic sobre </span>
+                        <span class="onlymobile">Toca </span>
+                        cada elemento para conocer su descripción.
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="w-content-controler" data-content="#red-pon">
+                                <h4>Red PON</h4>
+                                <div class="box_media">
+                                    <img src="content/modulo_1_figura2.png" />
+                                </div>
+                            </button>
+                            <div id="red-pon" class="w-content" data-property-width="500px">
+                                <h3>Red Óptica Pasiva (PON)</h3>
+                                <p>Entre la central del operador y la casa del cliente solo hay elementos pasivos, que dejan pasar la señal de luz y pueden dividirla para distribuirla entre los clientes. Por costos y facilidad de operación, la industria ha optado por las redes ópticas pasivas PON y serán la estudiadas en lo que sigue del curso.</p>
+                                <p>La red PON se caracteriza por usar el medio de transmisión compartido desde el operador hacia los clientes, es decir, todas las comunicaciones son enviadas por un único medio desde la central del operador y se divide para llegar a cada predio. En el sentido de las casas al operador, se debe arbitrar el retorno para usar el medio, controlando el acceso al medio (MAC por sus siglas en inglés).</p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <button class="w-content-controler" data-content="#ftth-dedicado">
+                                <h4>FTTH dedicado</h4>
+                                <div class="box_media">
+                                    <img src="content/modulo_1_figura2-2.png" />
+                                </div>
+                            </button>
+                            <div id="ftth-dedicado" class="w-content" data-property-width="600px">
+                                <h3>FTTH Dedicado</h3>
+                                <p>Se refiere a una red óptica punto a punto, en la cual cada residencia tiene un hilo de fibra dedicado hacia el operador y que es compartido solo por los dispositivos del hogar.</p>
+                                <p>En estas redes puede existir procesamiento en la red de distribución, de tal forma que se entrega información única para cada usuario a través de un switch. En este caso es una <strong>red FTTH en estrella activa</strong>. Esta configuración activa ofrece mucha flexibilidad y ancho de banda, pero a un mayor costo.</p>
+                                <div class="box_media">
+                                    <img src="content/modulo_1_figura3.png">
+                                    <div class="about"><strong>Figura 3.</strong> FTTH en estrella activa, caso especial de FTTH dedicado.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about"><strong>Figura 2.</strong> Esquemas de los distintos tipos de redes FTTH.</div>
+                </div>
+                <div class="subpage">
+                    <h3>3.2. Estándares de redes PON</h3>
+                    <p>Para permitir interoperabilidad y multiplicidad de proveedores de equipos, en beneficio de la industria, estas redes han sido estandarizadas por dos organismos principalmente: la ITU (International Telecommunication Union) y la IEEE (Institute of Electrical and Electronics Engineers). Aunque con algunas diferencias, principalmente en los protocolos, tratan de ser muy similares en los elementos físicos de la red.</p>
+                    <div class="box-text connection">
+                        <p>En la tabla se presentan las principales características de ambos estándares.</p>
+                    </div>
+                    <table class="datatable">
+                        <thead>
+                            <th></th>
+                            <th>BPON</th>
+                            <th>GPON</th>
+                            <th>EPON</th>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <th>Standard</th>
+                                <th>ITU-T G.983</th>
+                                <th>ITU-T G.984</th>
+                                <th>IEEE 802.3ah (1 Gb/s)<br />
+                                IEEE 802.3av (10Gb/s)</th>
+                            </tr>
+                            <tr>
+                                <th>Tasa de transmisión de bajada</th>
+                                <td>622 Mb/s</td>
+                                <td>2,5 Gb/s</td>
+                                <td>1,25 Gb/s, 10 Gb/s</td>
+                            </tr>
+                            <tr class="odd">
+                                <th>Tasa de transmisión de subida de datos</th>
+                                <td>155 Mb/s</td>
+                                <td>1,25 Gb/s</td>
+                                <td>1,25 Gb/s, 10 Gb/s</td>
+                            </tr>
+                            <tr>
+                                <th>Longitud de onda de bajada en nm</th>
+                                <td>1490, 1550</td>
+                                <td>1490</td>
+                                <td>1490, 1550</td>
+                            </tr>
+                            <tr class="odd">
+                                <th>Longitud de onda de subida en nm</th>
+                                <td>1310</td>
+                                <td>1310</td>
+                                <td>1310</td>
+                            </tr>
+                            <tr>
+                                <th>Protocolo</th>
+                                <td>ATM</td>
+                                <td>Ethernet sobre ATM/IP o TDM</td>
+                                <td>Ethernet</td>
+                            </tr>
+                            <tr class="odd">
+                                <th>Video</th>
+                                <td>RF en 1550 ó IP en 1490</td>
+                                <td>RF en 1550 ó IP en 1490</td>
+                                <td>IP Video</td>
+                            </tr>
+                            <tr>
+                                <th>Max división en la PON </th>
+                                <td>32</td>
+                                <td>64</td>
+                                <td>16</td>
+                            </tr>
+                            <tr class="odd">
+                                <th>Potencia del transmisor</th>
+                                <td>1-4 dBm</td>
+                                <td>OLT: ~0 a +6 dBm, ONT: ~ -4 a +2 dBm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Presupuesto de Potencia</th>
+                                <td>~13dB (min) a 28dB (máx.) con /32 divisiones</td>
+                                <td>~13dB (min) a 28dB (máx.) con /32 divisiones</td>
+                                <td></td>
+                            </tr>
+                            <tr class="odd">
+                                <th>Cobertura</th>
+                                <td><20 km</td>
+                                <td><60 km</td>
+                                <td><20 km</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="about"><strong>Tabla 1.</strong> Estándares de redes PON.</div>
+                    <div class="box-text link" label="Extendiendo el saber">
+                        <p><strong>Documento:</strong> <a href="https://www.itu.int/en/ITU-T/studygroups/2017-2020/15/Documents/OFC2018-2-Q2_v5.pdf" target="_blank">ITU-T PON standards - progress and recent activities</a></p>
+                        <p><strong>Duración:</strong> 18 páginas</p>
+                        <p><strong>Enunciado: </strong>para saber cómo han avanzado estas redes, puedes visitar la página y abordar los contenidos que allí se presentan. La lectura de esta temática es opcional y complementa tu estudio.</p>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>3.3. Composición</h3>
+                    <p>Las redes FTTH están constituidas básicamente por tres elementos: OLT, ODN y ONT. Acá se dará una breve descripción, pero se mostrarán en detalle en la visita a las distintas partes que conforman la red PON.</p>
+                    <div id="grafica4">
+                        <div class="instruction">
+                            <span class="notmobile">Pasa el cursor del <cite>mouse</cite> sobre </span>
+                            <span class="onlymobile">Toca </span>
+                            cada imagen para conocer su descripción.
+                        </div>
+                        <div class="composicion">
+                            <div class="tooltip olt" title="<strong>OLT (Optical Line Terminal).</strong> Terminal de línea óptico, está del lado del operador de la red." data-position-at="center">
+                                <div class="light olt1"></div>
+                            </div>
+                            <div class="tooltip ont" title="<strong>ONT (Optical Network Terminal).</strong> Equipo ubicado en los predios de los clientes, el cual provee las funcionalidades necesarias para recibir y transmitir señales ópticas." data-position-my="center bottom">
+                                <div class="light ont1"></div>
+                                <div class="light ont2"></div>
+                                <div class="light ont3"></div>
+                            </div>
+                            <div class="tooltip odn" title="<strong>ODN (Optical Distribution Network)</strong>, la Red Óptica de Distribución está compuesta por fibras ópticas mono-modo y componentes ópticas pasivas, principalmente los divisores o splitters ópticos. Según el estándar de la PON, se tiene especificada la distancia máxima entre la OLT y la ONT, por ejemplo en una GPON sería menos de 60 km." data-position-at="center">
+                                <div class="light odn1"></div>
+                                <div class="light odn2"></div>
+                                <div class="light odn3"></div>
+                            </div>
+                        </div>
+                        <div class="about"><strong>Gráfica 4.</strong> Composición red FTTH.</div>
+                    </div>
+                    <div class="box-text connection">
+                        <p>Vamos a entrar en detalles de los distintos elementos que componen una red GPON. Para ello retomemos la gráfica de su esquema general y hagamos una revisión más específica de las instalaciones de la oficina central del operador, los cables y las instalaciones en los predios de los clientes. Veamos que aunque tenemos 3 partes principales, sin una serie de elementos que proporcionan la ruta para las señales de luz, sería imposible establecer la conectividad.</p>
+                    </div>
+                    <div id="figura4">
+                        <div class="instruction">
+                            <span class="notmobile">Haz clic sobre </span>
+                            <span class="onlymobile">Toca </span>
+                            cada elemento para conocer su descripción.
+                        </div>
+                        <div class="esquema">
+                            <button class="w-content-controler oficina-central" data-content="#oficina-central"></button>
+                            <div id="oficina-central" class="w-content" data-property-width="90vw">
+                                <h4>Oficina central (Central Office-Co), cabecera (Head End)</h4>
+                                <p>Una oficina central o cabecera, y actualmente se puede incluir en esta categoría a los data center, es el sitio donde se procesan las señales que se van a transmitir a través de la red. En ella se encuentra el OLT (terminal de línea óptica) y las fibras ópticas junto con los elementos para organizarlas, que interconectan el OLT con la red alimentadora o <em>feeder</em>.</p>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Como vemos en este esquema, el OLT (ubicado en la oficina central) es uno de los extremos de la red que se conecta con la ODN, la red en fibra óptica de exterior (que conecta los extremos de la red), para llegar finalmente hasta los ONT.</p>
+                                        <p>Los distintos elementos que están en una oficina central, y que se detallan a continuación, son:</p>
+                                        <ul class="data_list">
+                                            <li>Bastidores y racks</li>
+                                            <li>Bandejas de fibra óptica</li>
+                                            <li>Paneles de interconexión</li>
+                                            <li>Conectores y cables de interconexión</li>
+                                            <li>Cajas de distribución de fibra óptica – ODF</li>
+                                            <li>OLT</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="box_media">
+                                            <img src="content/modulo_1_foto1.png" alt="Oficina central" />
+                                            <div class="about"><strong>Foto 1.</strong> Oficina central.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box_media">
+                                    <div class="figura5">
+                                    </div>
+                                    <div class="about"><strong>Figura 5.</strong> Oficina central (2021)</div>
+                                </div>
+                            </div>
+                            <button class="w-content-controler olt" data-content="#olt"></button>
+                            <div id="olt" class="w-content" data-property-width="90vw">
+                                <h4>OLT (Optical Line Terminal)</h4>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>La terminación de línea óptica tiene como función principal controlar, desde la oficina central, la información transmitida en ambas direcciones. Para ello cumple funciones como identificar, aprovisionar y hacer las veces de transceptor (transmite y recibe señales ópticas).</p>
+                                        <p><strong>Tasa de transmisión GPON:</strong> envía información  a 2,48 Gbps por puerto y son compartidos por todos los usuarios conectados a la OLT.</p>
+                                        <p><strong>Tasa de recepción:</strong> recibe información de la ONT a 1,24 Gbps.</p>
+                                        <p>Para el control de la información, el OLT integra varias funciones. Dentro de sus funciones básicas está:</p>
+                                        <ul class="data_list">
+                                            <li>Identifica pertenencia a la red mediante el ID de la ONT.</li>
+                                            <li>Pasada la identificación, entrega los servicios al cliente, lo que se denomina aprovisionamiento.</li>
+                                            <li>Cumple funciones de transmisión y recepción óptica.</li>
+                                            <li>Cumple funciones de control en la red de distribución, tal como control de la potencia transmitida desde la residencia a la oficina central.</li>
+                                            <li>Implementa corrección de errores y procesos en la información para mejorar su tolerancia a fallas. Igualmente, maneja el protocolo de acceso al medio (MAC) para arbitrar el ancho de banda del camino de retorno.</li>
+                                            <li>Hace el acople entre la red de transporte bajo protocolo ATM con la red de distribución ODN.</li>
+                                        </ul>    
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="view-first w-300 center">
+                                            <img src="content/modulo_1_imagen1.png" />
+                                            <div class="view-content">
+                                                <p><strong>Bastidor OLT:</strong> tiene tres partes principales: las placas OLT, las tarjetas de control y alimentación de potencia, y la interfaz con la red de transporte. En la figura se observa un bastidor que tiene 16 placas OLT, cada placa tiene 8 puertos y cada puerto puede atender máximo 128 usuarios, para un total de 16384 usuarios (16x8x128).</p>
+                                            </div>
+                                        </div>
+                                        <div class="about"><strong>Imagen 1.</strong> Esquema de un OLT. Detalle de placa y de puerto.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="w-content-controler conexion" data-content="#conexion"></button>
+                            <div id="conexion" class="w-content" data-property-width="90vw">
+                                <h4>Cableado para la interconexión de los puertos OLT con la ODN</h4>
+                                <p>Para conectar los puertos OLT con la red de distribución ODN se hace necesario un cableado interno en la oficina central, el cual se organiza en un <strong>distribuidor general de fibras ópticas</strong> (ODF) compuesto por: bastidores, racks, bandejas y fibras individuales llamadas <em>patch cord</em>. Veamos en qué consisten:</p>
+                                <div class="row racks">
+                                    <div class="col-2">
+                                        <h5>Bastidores o racks de fibra óptica</h5>
+                                        <p>Básicamente es un armario o estante metálico, cuya finalidad principal es la de albergar los paneles de interconexión de fibras. En sus laterales posee guías para organización de las fibras.</p>
+                                        <p>Usualmente son de longitudes de unos pocos metros, los suficientes para la interconexión interna de los equipos con la red externa. Son delicados y deben instalarse de manera ordenada de extremo a extremo. Los radios de curvatura reducidos generan atenuaciones adicionales que pueden provocar interrupciones del servicio.</p>
+                                        <div class="box-text connection">
+                                            <p>Dentro de estos bastidores, podemos enfocarnos ahora en sus elementos constitutivos principales.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="box_media">
+                                            <img class="w-300" src="content/modulo_1_foto2.png" alt="Racks de fibra óptica" />
+                                            <div class="about"><strong>Foto 2.</strong> Racks de fibra óptica.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Paneles de interconexión o <cite>patch panel</cite> instalados en los racks</h4>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="instruction">
+                                            <span class="notmobile">Pasa el cursor del <cite>mouse</cite> sobre </span>
+                                            <span class="onlymobile">Toca </span>
+                                            cada elemento para conocer su descripción.
+                                        </div>
+                                        <div class="paneles">
+                                            <div class="apuntador note_1">
+                                                <div class="tooltip" title="Accesorios incluidos de soporte y sujeción para rack 1RU-19´´.">Sujeción</div>
+                                            </div>
+                                            <div class="apuntador note_2">
+                                                <div class="tooltip" title="
+                                                    <p>Entradas posteriores para ingreso de cables.</p>
+                                                    <p>4 diferentes ingresos para cables Tight.</p>
+                                                    <p>Buffer, Loos Tube, Loose Tube armados y/o preterminados.</p>
+                                                ">Ingreso de cables</div>
+                                            </div>
+                                            <div class="apuntador note_3">
+                                                <div class="tooltip" title="
+                                                    <p>24 posiciones de acopladores.</p>
+                                                    <p>Se puede seleccionar de manera independiente cada posición.</p>
+                                                    <ul class='data_list'>
+                                                        <li>SC simplex APC o PC/UPC – SM o MM</li>
+                                                        <li>E2000 simplex APC o PC/UPC</li>
+                                                        <li>LC duplex APC o PC/UPC – SM o MM</li>
+                                                        <li>XX posición vacía para uso futuro</li>
+                                                    </ul>
+                                                ">Acopladores</div>
+                                            </div>
+                                            <div class="apuntador note_4">
+                                                <div class="tooltip" title="Frente móvil para acceso a sistema de empalmes y acopladores. La estructura queda fijada al rack para seguridad y mayor comodidad en el trabajo.">Frente móvil</div>
+                                            </div>
+                                        </div>
+                                        <div class="about"><strong>Imagen 2.</strong> Paneles de fibra óptica.</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <p>Son unas bandejas que permiten la administración y conexión de cada puerto de fibra de manera independiente. Los conectores de fibra óptica que hacen parte de estos paneles son tipo hembra, como se observa en la figura.</p>
+                                        <p>La característica principal de los paneles es su modularidad. Permiten la conexión de varios puertos de terminal de fibra y los más comunes son de 24 y 48 fibras ópticas o patch cords. Para que las fibras sean instaladas en los paneles deben terminar en conector tipo macho.</p>
+                                        <div class="box-text connection">
+                                            <p>Ahora veamos un detalle de estos conectores y de los <cite>patch cord</cite> que están en el interior de los patch panel.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Conectores y cables de interconexión:</h4>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="box_media">
+                                            <img src="content/modulo_1_foto3_1.png" alt="Conectores" style="max-height: 25vh" />
+                                            <img src="content/modulo_1-2_foto3_2.png" alt="Cables" style="max-height: 25vh" />
+                                        </div>
+                                        <div class="about"><strong>Foto 3.</strong> Conectores y cables.</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <p>Están conformados por el conector y un segmento de fibra óptica. El conector es tipo macho y se ajusta perfectamente al conector hembra del patch panel.</p>
+                                    </div>
+                                </div>
+                                <h4>Bandejas o escalerillas portacables</h4>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Todos los cables individuales de fibra deberán llevarse luego, por bandejas portacables, hacia una caja de empalme para interconectarlos con un cable multifibra de la red alimentadora que hace parte de la red externa u ODN.</p>
+                                        <p>Normalmente se instalan a 2,5 m de altura para evitar que el personal alcance los cables. Estas bandejas tienen una gran resistencia mecánica; cuando se trate de bandejas metálicas deben aterrizarse a la malla a tierra de la oficina central. Hay que considerar la carga de trabajo para evitar que la bandeja colapse (no usar cualquier soporte). La carga de trabajo es especificada por el fabricante de la bandeja.</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="box_media">
+                                            <img src="content/gif-opc-2.gif" alt="Bandejas o escalerillas" />
+                                        </div>
+                                        <div class="about"><strong>Foto 4.</strong> Bandejas o escalerillas. Fuente: García Bish, JR. (2013). <cite>Memorias del Curso actualización tecnológica FTTH.</cite> Andina Link.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="w-content-controler odn" data-content="#odn"></button>
+                            <div id="odn" class="w-content" data-property-width="90vw">
+                                <h4>ODN (Optical Distribution Network)</h4>
+                                <p>Es la red de fibra óptica (pasiva) externa a la oficina central y todos sus componentes asociados como divisores (splitters), conectores y cables de fibra óptica, entre otros, que constituyen una zona denominada Nodo. Se conforma por 3 segmentos: red feeder, red de distribución, red de drop.</p>
+                                <div class="instruction">
+                                    <span class="notmobile">Haz clic sobre </span>
+                                    <span class="onlymobile">Toca </span>
+                                    cada elemento de color para conocer su descripción.
+                                </div>
+                                <div class="genially">
+                                    <div style="width: 100%;"><div style="position: relative; padding-bottom: 62.50%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="750" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/620ea0e1c6e2e900187b31ff" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+                                </div>
+                                <!-- <div id="figura6" class="mouse-over-one">
+                                    <div class="figura6">
+                                        <div class="button paso1 current" data-ref="#contenido_figura6 .p1"></div>
+                                        <div class="button paso2" data-ref="#contenido_figura6 .p2"></div>
+                                        <div class="button paso3" data-ref="#contenido_figura6 .p3"></div>
+                                        <div class="button paso4" data-ref="#contenido_figura6 .p4"></div>
+                                        
+                                    </div>
+                                </div> -->
+                                <div class="about"><strong>Figura 6.</strong> ODN (2021)</div>
+
+                                <!-- <div id="contenido_figura6">
+                                    <div class="element p1">
+                                        <h5>Cable multifibra óptica:</h5>
+                                        <div class="row short">
+                                            <div class="col-2">
+                                                <div class="box_media">
+                                                    <div class="expand-image" data-src="content/modulo_1_imagen3.png" title="Cable fibra óptica."></div>
+                                                    <div class="about"><strong>Imagen 3.</strong> Cable fibra óptica.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <p>Los cables llevan en su interior la fibra óptica, un delgadísimo hilo de vidrio a través del cual se distribuye la señal óptica entre la oficina central y la residencia de los clientes. En los siguientes numerales se ampliará la información sobre los cables de fibra optica.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="element p2" style="display: none">
+                                        <h5>Punto de convergencia:</h5>
+                                        <div class="row short">
+                                            <div class="col-2">
+                                                <div class="box_media">
+                                                    <img src="content/modulo_1_foto5.png" alt="Punto de convergencia" />
+                                                    <div class="about"><strong>Foto 5.</strong> Punto de convergencia.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <p>Es el elemento o gabinete en el cual se realiza la interconexión óptica entre la red de alimentación Feeder y la red de distribución. Aquí <strong>se realiza el primer nivel de división (splitting)</strong> óptica de la red. Aloja divisores, paneles de interconexión, etc.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row short">
+                                            <div class="col-2">
+                                                <div class="box_media">
+                                                    <img src="content/modulo_1_foto6.png" alt="Punto de convergencia tipo domo" />
+                                                    <div class="about"><strong>Foto 6.</strong> Punto de convergencia tipo domo.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <p>En algunos casos es posible encontrar “armarios ópticos” (ARPON - FDH) fijos, en los cuales no se realiza ningún tipo de conexiones cruzadas. En este caso, los divisores son guardados en una cubierta de empalme, usualmente tipo domo y fusionados directamente a la red.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="element p3" style="display: none">
+                                        <h5>NAP- Network Access Point:</h5>
+                                        <div class="row short">
+                                            <div class="col-2">
+                                                <div class="box_media">
+                                                    <img src="content/modulo_1_foto7.png" alt="NAP" />
+                                                    <div class="about"><strong>Foto 7.</strong> NAP.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <p>El punto de acceso a la red es el elemento en el que se realiza la interconexión entre la red distribución y la red del cliente (drop). En él se realiza la segunda etapa de división óptica de la red, utilizando elementos divisores ópticos preconectorizados. Puede ser una caja de distribucion o una cubierta de empalme. Normalmente tiene un panel de conexión de 8 o 16 salidas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="element p4" style="display: none">
+                                        <h5>Red del cliente (drop)</h5>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="box_media">
+                                                    <div class="expand-image" data-src="content/modulo_1-2_imagen4.png" title="Drop"></div>
+                                                    <div class="about"><strong>Imagen 4.</strong> Drop</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <p>Cable de abonado que alimenta al cliente. La red de abonado óptico o drop óptico nace en el NAP y llega hasta una toma de conexión óptica <strong>llamada roseta.</strong></p>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>La roseta es un punto muy importante de chequeo, en el que termina la red del operador e inicia la red interna del cliente. El cordón de fibra de salida de la roseta termina en el ONT</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="box_media">
+                                                            <img src="content/modulo_1-2_foto8.png" alt="Roseta" />
+                                                            <div class="about"><strong>Foto 8.</strong> Roseta.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <button class="tooltip feeder" title="
+                                <h5>Red Feeder</h5>
+                                <p>Conecta el OLT con el punto de convergencia local donde se encuentra el divisor o splitter óptico de primer nivel.</p>
+                            "></button>
+                            <button class="tooltip distribucion" title="
+                                <h5>Red de distribución</h5>
+                                <p>Conecta el splitter de primer nivel con los NAP donde se encuentra un splitter de segundo nivel.</p>
+                            "></button>
+                            <button class="tooltip drop" title="
+                                <h5>Red Drop</h5>
+                                <p>Conecta el NAP con el ONT ubicado en los predios de los clientes.</p>
+                            "></button>
+                            <button class="w-content-controler ont" data-content="#ont"></button>
+                            <div id="ont" class="w-content" data-property-width="90vw">
+                                <h5>ONT (Optical Network Terminal)</h5>
+                                <div class="row short" style="max-width: 900px;">
+                                    <div class="col-2">
+                                        <p>Es el equipo activo terminal de la red óptica situado en las premisas del cliente. Aquí termina la fibra óptica y se inicia la conexión de los equipos de los clientes, a través de su red interna.</p>
+                                        <p>La ONT coopera con la OLT para el control de potencia a ser transmitida desde el usuario al operador. Tiene capacidad de corrección de errores y procesado de señal para tolerancia a degradaciones o fallos en la red. En cooperación con el OLT permite arbitrar el ancho de banda para el enlace de subida a través del control del acceso al medio MAC. Acopla la ODN a la red interna del cliente, por ejemplo, con fibras plásticas o cables UTP de redes de datos, suministrando para ello protocolos para manejo de velocidades, almacenamiento y encapsulamiento. En el caso del estándar ITU, provee la conexión de los datos entre el enlace de fibra y los distintos dispositivos en el hogar a través de la multiplexación ATM.</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="instruction">
+                                            <span class="notmobile">Pasa el cursor del mouse sobre </span>
+                                            <span class="onlymobile">Toca </span>
+                                            cada elemento para conocer su descripción.
+                                        </div>
+                                        <div class="router-image">
+                                            <div class="note_pointer_left optical">
+                                                <div class="tooltip" title="Óptico (Optical): indica el puerto óptico, aquí se conecta la fibra para la recepción y transmisión. El tipo de conector que se une al puerto OPTICAL es SC/APC.">Óptico</div>
+                                            </div>
+                                            <div class="note_pointer_right lan">
+                                                <div class="tooltip" title="LAN1 a LAN4= indica la conexión LAN de 10/100/1000M Base-T, puertos Ethernet (RJ-45), usados para conectar el computador o a un equipo terminal de usuario IP(IP STB).">LAN</div>
+                                            </div>
+                                            <div class="note_pointer_right tel">
+                                                <div class="tooltip" title="TEL1-TEL2: puertos para conectar los teléfonos IP(RJ-11). ON/OFF: botones de encendido y apagado de la unidad.">TEL</div>
+                                            </div>
+                                            <div class="note_pointer_left power">
+                                                <div class="tooltip" title="Power: puerto de conexión del adaptador de energía">Power</div>
+                                            </div>
+                                        </div>
+                                        <div class="about"><strong>Imagen 5.</strong> ONT HG 8245.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about"><strong>Figura 4.</strong> Esquema de una red PON.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-bibliografia" ptitle="Bibliografía">
+                <div class="subpage">
+                    <ul class="data_list">
+                        <li>Abe, G, (2000). <cite>Residential Broadband</cite>, Indianapolis, IN, USA. Cisco Press. 387 pp. The Fiber Optic Association Inc., (2015). Módulo FTTH (Fiber To The Home). Recuperado en noviembre de 2020 de <a href="https://www.thefoa.org/tech/ref/appln/FTTHarch.html" target="_blank">https://www.thefoa.org/[...]</a></li>
+                        <li>López, E. Curso FTTH. Universidad Politécnica de Cataluña. Recuperado en diciembre de 2020 de <a href="https://www.researchgate.net/profile/Eduardo_Lopez_Pastor" target="_blank">https://www.researchgate.net/[...]</a></li>
+                        <li>The Optical Networker, (May 4th 2020). In Real Life - GPON Fibre To The Home (video). Recuperado en diciembre 2020 de YouTube. <a href="https://www.youtube.com/watch?v=iRTAoq7y98c" target="_blank">https://www.youtube.com/[...]</a></li>
+                        <li>William O., G. (1988). <cite>Understanding Lightwave Transmission: Applications of Fiber Optics.</cite> Ed. Harcourt Brace and Co. </li>
+                        <li>Zhang, D., Liu, D., Wu, X., y Nesset, D. <cite>Progress of ITU-T higher speed passive optical network (50G-PON) standardization.</cite> Vol. 12, No. 10 / October 2020 / Journal of Optical Communications and Networking. <a href="https://doi.org/10.1364/JOCN.391830" target="_blank">https://doi.org/[...]</a></li>
+                    </ul>
+                    <h4>Figuras</h4>
+                    <ul class="data_list">
+                        <li><strong>Figura 1.</strong> Martínez, J. (2018). Redes FTTX. [Figura]. Recuperado el 7 de noviembre de 2020 de <a href="https://www.prored.es/fttx-que-significa-que-variantes-tiene/" target="_blank">https://www.prored.es/[...]</a></li>
+                        <li><strong>Figura 2.</strong> The Fiber Optic Association. (s.f.) Esquemas de los distintos tipos de redes FTTH. [Figura]. Adaptado el 5 de noviembre de 2020 de <a href="https://www.thefoa.org/tech/ref/appln/FTTH-PON.html" target="_blank">https://www.thefoa.org/[...]</a></li>
+                        <li><strong>Figura 3.</strong> The Fiber Optic Association. (s.f.). FTTH en estrella activa, caso especial de FTTH dedicado. [Figura]. Adaptado el 7 de noviembre de 2020 de <a href="https://www.thefoa.org/tech/ref/appln/FTTH-PON.html" target="_blank">https://www.thefoa.org/[...]</a></li>
+                        <li><strong>Figura 4.</strong> López, E. (2015). Esquema de una red PON. [Imagen]. Recuperado el 11 de noviembre de 2020 de <a href="https://www.researchgate.net/publication/280069225_FTTH_Course_-_Module_2" target="_blank">https://www.researchgate.net/[...]</a></li>
+                    </ul>
+                    <h4>Gráficas</h4>
+                    <ul class="data_list">
+                        <li><strong>Gráfica 2.</strong> López, E. (2015). Tipo de sistemas de telecomunicaciones de acuerdo con el sentido de transmisión: a) Unidireccional, b) Bidireccional [Gráfica]. Recuperado el 12 de noviembre de 2020 de <a href="https://www.researchgate.net/publication/280068933_FTTH_Course_-_Module_1" target="_blank">https://www.researchgate.net/[...]</a></li>
+                        <li><strong>Gráfica 3.</strong> Nec (s.f.) Tipos de redes de comunicaciones de acuerdo con su alcance y capacidad de transmitir información. [Gráfica]. Adaptado el 11 de noviembre de 2020 de <a href="https://se.nec.com/en_SE/global/solutions/nsp/opt/wdm/index.html" target="_blank">https://se.nec.com/[...]</a></li>
+                    </ul>
+                    <h4>Tablas</h4>
+                    <ul class="data_list">
+                        <li><strong>Tabla 1.</strong> Fiber U. (s.f.) Estándares de redes PON. [Tabla]. Recuperado el 8 de noviembre de 2020 de <a href="https://fiberu.org/FTTX/LP6.html" target="_blank">https://fiberu.org/[...]</a></li>
+                    </ul>
+                    <h4>Fotos</h4>
+                    <ul class="data_list">
+                        <li><strong>Foto 1.</strong> Wikimedia Commons. (s.f.). Oficina central. [Fotografía]. Recuperado el 15 de noviembre de 2020 de <a href="https://commons.wikimedia.org/wiki/File:Emulab-cluster2-back.jpg" target="_blank">https://commons.wikimedia.org/[...]</a></li>
+                        <li><strong>Foto 2.</strong> FTTH Indoor Cable - Fiber Optic Equipment Solutions, (2015). Racks de fibra óptica. [Fotografía]. Recuperado el 11 de noviembre de 2020 de <a href="http://www.fiber-optic-equipment.com/wp-content/uploads/2018/05/vertical-cable-manager.jpg" target="_blank">http://www.fiber-optic-equipment.com/[...]</a></li>
+                        <li><strong>Foto 3.</strong> TIFiber (s.f.). Conectores y cables. [Fotografía]. Recuperado el 14 de noviembre de 2020 de <a href="http://www.fiberopticpatch-cord.com/sale-11310023-light-weight-fiber-optic-terminal-box-24-ports-ftth-rack-drawer-type-with-patch-panel.html" target="_blank">http://www.fiberopticpatch-cord.com/[...]</a></li>
+                        <li><strong>Foto 4.</strong> García, JR. (2013). Bandejas o escalerillas. [Fotografías]. Recuperados el 9 de marzo de 2021 de <a href="https://www.cnbonet.com/templets/bonet/images/product/fiber/f04.jpg" target="_blank">https://www.cnbonet.com/[...]</a>, <a href="https://www.cnbonet.com/templets/bonet/images/product/fiber/f01.jpg" target="_blank">https://www.cnbonet.com/[...]</a>, <a href="https://www.cnbonet.com/templets/bonet/images/product/fiber/f05.jpg" target="_blank">https://www.cnbonet.com/[...]</a></li>
+                    </ul>
+                    <h4>Imágenes</h4>
+                    <ul class="data_list">
+                        <li><strong>Imagen 1.</strong> Router-Swtch. (s.f.). Esquema de un OLT. Detalle de placa y de puerto. [Imagen]. Adaptado el 11 de noviembre de 2020 de <a href="https://www.router-switch.com/huawei-ma5600t-olt.html" target="_blank">https://www.router-switch.com/[...]</a></li>
+                        <li><strong>Imagen 2.</strong> Lozano, C.(2016). Paneles de fibra óptica. [Imagen]. Adaptado el 15 de noviembre de 2020 de <a href="https://cableservicios.com/fibraoptica/2016/06/07/como-elegir-el-mejor-panel-de-fibra-optica/" target="_blank">https://cableservicios.com/[...]</a>.</li>
+                        <li><strong>Imagen 5.</strong> Ycict (s.f.). ONT HG 8245. [Imagen]. Recuperado el 11 de noviembre de 2020 de  <a href="https://www.ycict.net/es/products/huawei-hg8245h-ftth/" target="_blank">https://www.ycict.net/[...]</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--Créditos-->
+            <section id="pag-creditos" ptitle="Créditos">
+                <div class="subpage" id="credits_subpage">
+                    <div>
+                        <h3>Desarrollo de contenidos</h3>
+                        <cite>John Jairo Jaramillo Rodríguez<br />
+                            <strong>Experto Temático</strong><br />
+                            Ana María Cárdenas Soto<br />
+                            <strong>Experta Temática</strong></cite>
+                    </div>
+                    <div>
+                        <h3>Asesoría pedagógica y diseño instruccional</h3>
+                        <cite>Carolina Llanos Tobón</cite>
+                    </div>
+                    <div>
+                        <h3>Corrección de estilo</h3>
+                        <cite>Felipe Sosa Vargas</cite>
+                    </div>
+                    <div>
+                        <h3>Diseño gráfico</h3>
+                        <cite>Elizabeth Hernandez González</cite>
+                    </div>
+                    <div>
+                        <h3>Integración de contenidos</h3>
+                        <cite>Santiago Bernal García</cite>
+                    </div>
+                    <div>
+                        <h3>Revisión de calidad</h3>
+                        <cite>Lorena Guarín Herrera</cite>
+                    </div>
+
+                    <div>
+                        <h3>Producción, gestión técnica y administrativa</h3>
+                        <p class="logos">
+                            <a href="http://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="BambuColectivo" /></a>
+                            <a href="https://fycolearning.com/" target="_blank"><img src="img/logo_azul.png" alt="Fyco Telecomunicaciones" /></a>
+                        </p>
+                    </div>
+
+                    <div class="editions">
+                        1ª edición: noviembre 2020
+                    </div>
+                    <div>
+                        <br />
+                        <!-- <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Obra publicada bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                        <img src="img/cc.png" alt="Creative Commons" /></a> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="Características globales" class="globals">
+                <menu>
+                    <menuitem data-global-id="results"><i title="Progreso" class="ion-clipboard " data-position-at="top"></i></menuitem>
+                    <menuitem data-global-id="return">
+                        <i title="Maximizar" class="ion-arrow-expand  maximize" data-position-at="top"></i>
+                        <i title="Minimizar" class="ion-arrow-shrink  minimize" data-position-at="top"></i>
+                    </menuitem>
+                    <menuitem data-global-id="close_all"><i title="Regresar" class="ion-reply " data-position-at="top"></i></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <ul class="button" subpages-menu></ul>
+                <div id="page_number"></div>
+                <div class="button" next-page></div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>
